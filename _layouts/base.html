@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>{{ page.title }} | its not art its code</title>
+		<meta charset=utf-8>
+		<meta name=author content="Javier Chavez">
+		<meta http-equiv="Content-Language" content="en">
+		<meta name="description" content="Javier's portfolio of random apps and ideas. OH! also my resume.">
+		<meta name="keywords" content="android developer, javascript developer, wordpress, albuquerque">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/pretty.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="{{ page.title }}">
+	{% include menu.html %}
+		<div id="container">
+			{{ content }} 
+		</div>
+		{% include footer.html%}
+		{% include libs.html %}
+		{% include analytics.html %}
+    </body>   
+</html>

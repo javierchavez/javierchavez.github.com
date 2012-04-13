@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+        <title>itscodenotart</title>
+        <description>Feed</description>
+        <link>http://javierchavez.github.com</link>
+		<atom:link href="http://javierchavez.github.com/rss.xml" rel="self" type="application/rss+xml" />
+		<language>en-us</language>
+        <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+        <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <ttl>1800</ttl>
+
+ 
+		{% for post in site.posts %}
+			<item>
+				<title>{{ post.title }}</title>
+				<description>{{ post.excerpt}}</description>
+				<link>http://javierchavez.github.com{{ post.url }}</link>
+				<guid>http://javierchavez.github.com{{ post.id }}</guid>
+				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+			</item>
+		{% endfor %}
+</channel>
+</rss>
