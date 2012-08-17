@@ -2,9 +2,7 @@
 Options -Indexes 
 
 # Redirection of www.* to non-www.*
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.itsnotartitscode.com
-RewriteRule (.*) http://itsnotartitscode.com/ [R=301,L]
+
 
 # Caching 
 # Header unset ETag
